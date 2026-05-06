@@ -1,0 +1,32 @@
+{
+  "index": 249,
+  "phase": 2,
+  "batch": 28,
+  "name": "fathom-ops-rename-map",
+  "planned_name": "fathom-ops-rename-map",
+  "language": "JavaScript",
+  "category": "Automation",
+  "goal": "Develop a JavaScript command-oriented project for rename scenarios with fixture event logs, golden state snapshots, and fixture-scale datasets.",
+  "repository_url": "https://github.com/ZachL111/fathom-ops-rename-map",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 150,
+    "risk_penalty": 7,
+    "latency_penalty": 3,
+    "weight_bonus": 3,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
