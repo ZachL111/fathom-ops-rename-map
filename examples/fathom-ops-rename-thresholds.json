@@ -1,0 +1,17 @@
+{
+  "repo": "fathom-ops-rename-map",
+  "thresholds": {
+    "signal": 3,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 2,
+    "ship": 160,
+    "watch": 98
+  },
+  "terms": [
+    "dry-run spread",
+    "rename risk",
+    "operator cost",
+    "idempotence"
+  ]
+}
