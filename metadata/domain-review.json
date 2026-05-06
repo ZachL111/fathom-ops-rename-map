@@ -1,0 +1,73 @@
+{
+  "repo": "fathom-ops-rename-map",
+  "language": "JavaScript",
+  "category": "Automation",
+  "goal": "Develop a JavaScript command-oriented project for rename scenarios with fixture event logs, golden state snapshots, and fixture-scale datasets.",
+  "review_model": {
+    "terms": [
+      "dry-run spread",
+      "rename risk",
+      "operator cost",
+      "idempotence"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "dry-run spread",
+      "signal": 46,
+      "slack": 43,
+      "drag": 18,
+      "confidence": 77,
+      "score": 158,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "rename risk",
+      "signal": 69,
+      "slack": 21,
+      "drag": 23,
+      "confidence": 53,
+      "score": 143,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "operator cost",
+      "signal": 74,
+      "slack": 48,
+      "drag": 10,
+      "confidence": 72,
+      "score": 238,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "idempotence",
+      "signal": 88,
+      "slack": 54,
+      "drag": 27,
+      "confidence": 51,
+      "score": 200,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "dry-run spread",
+      "signal": 62,
+      "slack": 37,
+      "drag": 11,
+      "confidence": 84,
+      "score": 212,
+      "lane": "ship"
+    }
+  ]
+}
